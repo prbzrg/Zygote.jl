@@ -53,6 +53,8 @@ jobs:
         # `allow-failure` not available yet https://github.com/actions/toolkit/issues/399
         #continue-on-error: ${{ matrix.version == 'nightly' }} # comment out to report nightly failures
       - uses: julia-actions/julia-runtest@v1
+        with:
+           check_bounds: yes
         env:
            JULIA_PKG_SERVER: ""
         #continue-on-error: ${{ matrix.version == 'nightly' }} # comment out to report nightly failures
